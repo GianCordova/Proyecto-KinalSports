@@ -1,14 +1,9 @@
-import { useState } from "react";
-
-export const App = () => {
-
-  const [contar, setContar] = useState(0); //contador
-
+import { AuthPage } from "../features/auth/pages/AuthPage.jsx";
+function App() {
     return (
         <>
-          <h1 onClick={()=>{
-            setContar(contar + 1);
-          }}>Hola Mundo {contar}</h1>
+          <h1>Hola Mundo</h1>
+          <AuthPage />
         </>
   );
 }
