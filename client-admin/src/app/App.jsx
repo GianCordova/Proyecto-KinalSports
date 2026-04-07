@@ -1,12 +1,16 @@
+import { useState } from "react";
+
 export const App = () => {
+
+  const [contar, setContar] = useState(0); //contador
+
     return (
         <>
-          <h1 className="text-3xl">Hola Mundo</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua.</p>
+          <h1 onClick={()=>{
+            setContar(contar + 1);
+          }}>Hola Mundo {contar}</h1>
         </>
-  )
+  );
 }
 
 export default App;
