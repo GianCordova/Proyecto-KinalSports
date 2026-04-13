@@ -1,11 +1,22 @@
-import { AuthPage } from "../features/auth/pages/AuthPage.jsx";
-import { LoginForm } from "../features/auth/components/LoginForm.jsx";
-import { ForgotPasswordForm } from "../features/auth/components/ForgotPasswordForm.jsx";
+import { AppRoutes } from "./router/AppRoutes.jsx";
+import { Toaster } from "react-hot-toast";
+
 function App() {
     return (
         <>
-          <h1>Hola Mundo</h1>
-          <AuthPage />
+          <Toaster
+          position="top-center"
+          toastOptions={{
+            style: {
+              fontFamily: "inherit",
+              fontWeight: "600",
+              fontSize: "1rem",
+              borderRadius: "8px",
+            }
+          }}
+          />
+
+          <AppRoutes />
         </>
   );
 }
