@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { LoginForm } from "../components/LoginForm";
+import { ForgotPasswordForm } from "../components/ForgotPasswordForm";
 
 const AuthPage = () => {
     const [isLogin, setIsLogin] = useState(true);
@@ -44,11 +45,11 @@ const AuthPage = () => {
                     </p>
                 </div>
             
-            {isForgot
-            ?"Formulario"
-            :<LoginForm />
-            
-            }
+            {isForgot ? (
+                    <ForgotPasswordForm onSwitch={() => setIsForgot(false)} />
+                ) : (
+                    <LoginForm onForgot={() => setIsForgot(true)} />
+                )}
 
             </div>
 
