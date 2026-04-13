@@ -28,7 +28,7 @@ export const ForgotPasswordForm = ({ onSwitch }) => {
           onClick={onSwitch}
           className="text-main-blue font-medium hover:underline"
         >
-          Iniciar sesión
+          Iniciar sesion
         </button>
       </p>
     </form>
